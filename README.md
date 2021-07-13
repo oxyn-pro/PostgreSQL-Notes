@@ -1,10 +1,8 @@
 # Learning_PotgreSQL
 
 # To create a User:
-'''
 CREATE USER <name_of_user>
 DROP USER <name_of_user>
-'''
 
 # To create a DataBase:
 CREATE DATABASE <name_of_database>
