@@ -39,12 +39,16 @@ example
 
 ## Comparison:
 >SELECT 1 <> 2             -        1 is not equal to 2
+>
 >SELECT 1 > 2   (1<2)            -        1 is greater than 2 ( 2 is greater than 1)
+>
 >SELECT 1 <= 2 (1>=2)          -        2 is greater or equal to 2 (1 is greater or equal to 2)
 
 ## OFFSET, LIMIT or FETCH:
 >SELECT * FROM person LIMIT 10;
+>
 >SELECT * FROM person OFFSET 5 LIMIT 3;
+>
 >SELECT * FROM person OFFSET 5 FETCH 3 ROW ONLY;
 
 ## BETWEEN:
