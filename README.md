@@ -45,16 +45,21 @@ example
 >SELECT 1 <= 2 (1>=2)          -        2 is greater or equal to 2 (1 is greater or equal to 2)
 
 ## OFFSET, LIMIT or FETCH:
->SELECT * FROM person LIMIT 10;
+>SELECT * FROM <name_of_table> LIMIT 10;
 >
->SELECT * FROM person OFFSET 5 LIMIT 3;
+>SELECT * FROM <name_of_table> OFFSET 5 LIMIT 3;
 >
->SELECT * FROM person OFFSET 5 FETCH 3 ROW ONLY;
+>SELECT * FROM <name_of_table> OFFSET 5 FETCH 3 ROW ONLY;
 
 ## BETWEEN:
->SELECT * FROM person WHERE date_of_birth BETWEEN (‘DATE’ optional ) ‘2014-02-15’ AND ‘2021-07-25’;
+>SELECT * FROM <name_of_table> WHERE <name_of_column> BETWEEN (‘DATE’ optional ) ‘2014-02-15’ AND ‘2021-07-25’;
 
-
+## LIKE, ILIKE
+>SELECT * FROM <name_of_table> WHERE <name_of_column> LIKE <search from_the_existing_data>;
+>
+>SELECT * FROM <name_of_table> WHERE <name_of_column> ILIKE <search from_the_existing_data>;  
+  
+(The difference between LIKE and ILIKE is that ILIKE also accepts related values. For example: "p%" will search for all lower p and upper P).
 
 
 
