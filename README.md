@@ -87,10 +87,12 @@ example:
 >SELECT make, price, price * .10 FROM car GROUP BY make, price;
   
 ## Aliases:
-SELECT <name_of_column> AS <name_of_alias>FROM <name_of_table>;
+>SELECT <name_of_column> AS <name_of_alias>FROM <name_of_table>;
 
 example:
 >SELECT price AS original_price FROM car;
+  
+
 
 
 
