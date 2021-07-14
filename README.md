@@ -98,6 +98,14 @@ example:
 example:
 >SELECT COALESCE(email, 'Email was not provided') FROM person;
   
+## NULLIF:
+>SELECT NULLIF(2, 2);   # It will return Null
+>
+>SELECT 10 / NULLIF(2,2)   # This will not throw an exception as it would do with 10 / 0
+
+example:
+>SELECT COALESCE(10 / NULLIFF(2,2), 6);
+ 
 
 
 
