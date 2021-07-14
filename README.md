@@ -60,6 +60,25 @@ example
 >SELECT * FROM <name_of_table> WHERE <name_of_column> ILIKE <search from_the_existing_data>;  
   
 (The difference between LIKE and ILIKE is that ILIKE also accepts related values. For example: "p%" will search for all lower p and upper P).
+  
+## GROUP BY, HAVING
+>SELECT <name_of_column>, <name_of_column> FROM <name_of_table> GROUP BY <name_of_column>;
+>
+>SELECT <name_of_column>, COUNT(*) FROM <name_of_table> GROUP BY <name_of_column> HAVING COUNT(*) > 5;
+  
+example:
+>SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth;
+>
+>SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth HAVING COUNT(*) > 5;
+  
+## SUM, MIN, MAX, AVG
+>SELECT MIN(<name_of_column>) FROM <name_of_table>;
+>
+>SELECT MAX(<name_of_column>) FROM <name_of_table>;
+>
+>SELECT AVG(<name_of_column>) FROM <name_of_table>;
+> 
+>SELECT <name_of_column>, SUM(<name_of_column>) FROM <name_of_table> GROUP BY <name_of_column>;
 
 
 
