@@ -80,7 +80,11 @@ example:
 > 
 >SELECT <name_of_column>, SUM(<name_of_column>) FROM <name_of_table> GROUP BY <name_of_column>;
 
-
+## Arithmetic Operations
+>SELECT <name_of_column>, <name_of_column>, <name_of_column> * 0.10 FROM <name_of_table> GROUP BY <name_of_column>, <name_of_column>;     # it calculates 10% of the price
+  
+example:
+>SELECT make, price, price * .10 FROM car GROUP BY make, price;
 
 
 
