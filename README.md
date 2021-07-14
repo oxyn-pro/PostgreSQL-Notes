@@ -54,14 +54,14 @@ example
 ## BETWEEN:
 >SELECT * FROM <name_of_table> WHERE <name_of_column> BETWEEN (‘DATE’ optional ) ‘2014-02-15’ AND ‘2021-07-25’;
 
-## LIKE, ILIKE
+## LIKE, ILIKE:
 >SELECT * FROM <name_of_table> WHERE <name_of_column> LIKE <search from_the_existing_data>;
 >
 >SELECT * FROM <name_of_table> WHERE <name_of_column> ILIKE <search from_the_existing_data>;  
   
 (The difference between LIKE and ILIKE is that ILIKE also accepts related values. For example: "p%" will search for all lower p and upper P).
   
-## GROUP BY, HAVING
+## GROUP BY, HAVING:
 >SELECT <name_of_column>, <name_of_column> FROM <name_of_table> GROUP BY <name_of_column>;
 >
 >SELECT <name_of_column>, COUNT(*) FROM <name_of_table> GROUP BY <name_of_column> HAVING COUNT(*) > 5;
@@ -71,7 +71,7 @@ example:
 >
 >SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth HAVING COUNT(*) > 5;
   
-## SUM, MIN, MAX, AVG
+## SUM, MIN, MAX, AVG:
 >SELECT MIN(<name_of_column>) FROM <name_of_table>;
 >
 >SELECT MAX(<name_of_column>) FROM <name_of_table>;
@@ -80,11 +80,18 @@ example:
 > 
 >SELECT <name_of_column>, SUM(<name_of_column>) FROM <name_of_table> GROUP BY <name_of_column>;
 
-## Arithmetic Operations
+## Arithmetic Operations:
 >SELECT <name_of_column>, <name_of_column>, <name_of_column> * 0.10 FROM <name_of_table> GROUP BY <name_of_column>, <name_of_column>;     # it calculates 10% of the price
   
 example:
 >SELECT make, price, price * .10 FROM car GROUP BY make, price;
+  
+## Aliases:
+SELECT <name_of_column> AS <name_of_alias>FROM <name_of_table>;
+
+example:
+>SELECT price AS original_price FROM car;
+
 
 
 
