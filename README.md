@@ -105,6 +105,13 @@ example:
 
 example:
 >SELECT COALESCE(10 / NULLIFF(2,2), 6);
+  
+## Date
+>SELECT NOW();
+>
+>SELECT NOW()::DATE;
+>
+>SELECT NOW()::TIME;
  
 
 
