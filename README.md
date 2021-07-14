@@ -1,32 +1,32 @@
 # Learning_PotgreSQL 
 
 ## To create a User:
->CREATE USER <name_of_user>
+>CREATE USER <name_of_user>;
 >
->DROP USER <name_of_user>
+>DROP USER <name_of_user>;
 
 
 ## To create a DataBase:
->CREATE DATABASE <name_of_database>
+>CREATE DATABASE <name_of_database> ;
 >
->DROP DATABASE <name_of_database>
+>DROP DATABASE <name_of_database> ;
 
 ## To create a Table:
->CREATE TABLE <name_of_table>
+>CREATE TABLE <name_of_table> ;
 >
->DROP TABLE <name_of_table>
+>DROP TABLE <name_of_table>;
 
 #### Reveal items of Table:
->SELECT * FROM <name_of_table> 
+>SELECT * FROM <name_of_table> ;
 
 ## Sorting:
->SELECT * FROM <name_of_table> ORDER BY <selected_collumn> (, you can add more) ASC / DESC 
+>SELECT * FROM <name_of_table> ORDER BY <selected_collumn> (, you can add more) ASC / DESC ;
 
 example: 
->SELECT * FROM person ORDER BY id DESC (it sorts in descending order)
+>SELECT * FROM person ORDER BY id DESC (it sorts in descending order);
 
 #### Or sort by DISTICT items:
->SELECT DISTINCT <selected_collumn> FROM <name_of_table> ORDER BY <selected_collumn> (, you can add more) ASC / DESC;
+>SELECT DISTINCT <selected_collumn> FROM <name_of_table> ORDER BY <selected_collumn> (, you can add more) ASC / DESC ;
 
 example
 >SELECT DISTINCT country_of_birth FROM person ORDER BY country_of_birth DESC;
