@@ -126,6 +126,12 @@ SELECT NOW() - INTERVAL '10 DAYS';
 >SELECT EXTRACT(MONTH FROM NOW());
 >
 >SELECT EXTRACT(DAY FROM NOW());
+  
+#### AGE function;
+>SELECT <DATE_collumn>, AGE(NOW(), <DATE_collumn>) FROM <name_of_table>;
+  
+example:
+>SELECT date_of_birth, AGE(NOW(), date_of_birth) FROM person;
 
 
 
