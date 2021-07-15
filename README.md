@@ -113,14 +113,14 @@ example:
 >
 >SELECT NOW()::TIME;
 
-### Adding and Substracting Dates with INTERVAL:
+#### Adding and Substracting Dates with INTERVAL:
 >SELECT NOW() - INTERVAL '5 YEARS';
 >
 >SELECT NOW() - INTERVAL '2 MONTHS';
 >
 SELECT NOW() - INTERVAL '10 DAYS';
   
-### EXTRACT data of DATE:
+#### EXTRACT data of DATE:
 >SELECT EXTRACT(YEAR FROM NOW());
 >
 >SELECT EXTRACT(MONTH FROM NOW());
