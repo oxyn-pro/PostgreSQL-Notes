@@ -133,6 +133,32 @@ SELECT NOW() - INTERVAL '10 DAYS';
 example:
 >SELECT date_of_birth, AGE(NOW(), date_of_birth) FROM person;
 
+## CONSTRAINTs:
+Adding the constraint:
+#### PRIMARY KEY
+>ALTER TABLE <name_of_table> ADD CONSTRAINT <name_of_constraint> PRIMARY KEY (<name_of_column>, ... (there can be passed different columns));
+
+example:
+>ALTER TABLE person ADD CONSTRAINT primary_key_id PRIMARY KEY (id);
+  
+Deleting the constraint:
+>ALTER TABLE person DROP CONSTRAINT <name_of_constraint> (primary_key_id);
+
+#### UNIQUE
+>ALTER TABLE <name_of_table> ADD CONSTRAINT <name_of_constraint> UNIQUE (<name_of_column>, ... (there can be passed different columns));
+
+example:
+>ALTER TABLE person ADD CONSTRAINT unique_email UNIQUE (email);
+
+#### CHECK 
+>ALTER TABLE <name_of_table> ADD CONSTRAINT <name_of_constraint> CHECK (<name_of_column> = 'Data' OR .... (there can be passed different columns with Data));
+  
+example:
+>ALTER TABLE person ADD CONSTRAINT mark_check CHECK ( mark = 'Mazda' OR mark = 'Ford');
+
+  
+
+
 
 
 
