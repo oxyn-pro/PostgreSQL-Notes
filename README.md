@@ -134,8 +134,9 @@ example:
 >SELECT date_of_birth, AGE(NOW(), date_of_birth) FROM person;
 
 ## CONSTRAINTs:
-Adding the constraint:
+
 #### PRIMARY KEY
+Adding the constraint:
 >ALTER TABLE <name_of_table> ADD CONSTRAINT <name_of_constraint> PRIMARY KEY (<name_of_column>, ... (there can be passed different columns));
 
 example:
