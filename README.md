@@ -1,5 +1,14 @@
 # Learning_PotgreSQL 
 
+# In order to see the database location on your computer, enter to the psql and type: 
+>show data_directory;
+
+# To find out which id illustrates a particular database type in psql:
+>SELECT oid AS object_id, datname AS database_name FROM pg_database;
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+
 ## To create a User:
 >CREATE USER <name_of_user>;
 >
