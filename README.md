@@ -165,6 +165,12 @@ example:
   
 example:
 >ALTER TABLE person ADD CONSTRAINT mark_check CHECK ( mark = 'Mazda' OR mark = 'Ford');
+  
+## Handling Exceptions of unique collumns
+>INSERT INTO person (id, mark, model) VALUES (1, 'Mazda', 'Z5') ON CONFLICT (id) DO NOTHING;
+
+#### On Conflict Do Update
+>INSERT INTO person (id, mark, model) VALUES (1, 'Ford', 'Mustang') ON CONFLICT (id) DO UPDATE SET mark = EXCLUDED.mark, model = EXCLUDED.model; 
 
   
 
