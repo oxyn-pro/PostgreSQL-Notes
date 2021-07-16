@@ -171,7 +171,14 @@ example:
 
 #### On Conflict Do Update
 >INSERT INTO person (id, mark, model) VALUES (1, 'Ford', 'Mustang') ON CONFLICT (id) DO UPDATE SET mark = EXCLUDED.mark, model = EXCLUDED.model; 
+  
+## JOIN, LEFT JOIN
+JOIN will display the data of relational tables (i.e. Foreign Key). 
+LEFT JOIN display all the data of relational tables (rows) and unrelated tables (with or with not Foreign Key)
 
+example:
+>SELECT * FROM person JOIN car ON person.car_id = car.id;    # It only works  if both tables are connected to each other and it will display only people with cars (because only people with cars are connected to the 'person' table.
+>SELECT * FROM person LEFT JOIN car ON person.car_id = car.id   # It only works if both tables are connected to each other and displays all people with or without cars.
   
 
 
