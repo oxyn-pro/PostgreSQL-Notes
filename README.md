@@ -206,9 +206,9 @@ example:
 >SELECT uuid_generate_v4();
 
 ## Inserting UUID as ID to tables:
->CREATE TABLE person (person_uid UUID NOT NULL, ...other_collumns )
+>CREATE TABLE person (person_uid UUID NOT NULL, ...other_collumns );
 >
->INSERT INTO person (person_uid, ...other_collumns) VALUES ( uuid_generate_v4(), ...other_collumns)
+>INSERT INTO person (person_uid, ...other_collumns) VALUES ( uuid_generate_v4(), ...other_collumns);
   
 
 
