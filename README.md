@@ -115,7 +115,7 @@ example:
 example:
 >SELECT COALESCE(10 / NULLIFF(2,2), 6);
   
-## Date
+## Date:
 >SELECT NOW();
 >
 >SELECT NOW()::DATE;
@@ -136,7 +136,7 @@ SELECT NOW() - INTERVAL '10 DAYS';
 >
 >SELECT EXTRACT(DAY FROM NOW());
   
-#### AGE function;
+#### AGE function
 >SELECT <DATE_collumn>, AGE(NOW(), <DATE_collumn>) FROM <name_of_table>;
   
 example:
@@ -166,13 +166,13 @@ example:
 example:
 >ALTER TABLE person ADD CONSTRAINT mark_check CHECK ( mark = 'Mazda' OR mark = 'Ford');
   
-## Handling Exceptions of unique collumns
+## Handling Exceptions of unique collumns:
 >INSERT INTO person (id, mark, model) VALUES (1, 'Mazda', 'Z5') ON CONFLICT (id) DO NOTHING;
 
 #### On Conflict Do Update
 >INSERT INTO person (id, mark, model) VALUES (1, 'Ford', 'Mustang') ON CONFLICT (id) DO UPDATE SET mark = EXCLUDED.mark, model = EXCLUDED.model; 
   
-## JOIN, LEFT JOIN
+## JOIN, LEFT JOIN:
 JOIN will display the data of relational tables (i.e. Foreign Key). 
 LEFT JOIN display all the data of relational tables (rows) and unrelated tables (with or with not Foreign Key)
 
@@ -180,6 +180,25 @@ example:
 >SELECT * FROM person JOIN car ON person.car_id = car.id; ----- # It only works  if both tables are connected to each other and it will display only people with cars (because only people with cars are connected to the 'person' table.
 >
 >SELECT * FROM person LEFT JOIN car ON person.car_id = car.id; ----- # It only works if both tables are connected to each other and displays all people with or without cars.
+  
+## Export records into CSV file:
+>\copy (SELECT * FROM person) TO (C:/Users/your_user/Desktop) DELIMITER ',' CSV HEADER;
+  
+## BIGSERIAL 
+>SELECT * FROM <name_of_bigserial_table_seq>
+>
+>SELECT nextval('<name_of_bigserial_table_seq>'::regclass);
+>
+>ALTER SEQUENCE <name_of_bigserial_table_seq> RESTART WITH 'value';
+
+example:
+>SELECT * FROM person_id_seq;
+>
+>SELECT nextval('person_id_seq'::regclass);
+>
+>ALTER SEQUENCE person_id_seq RESTART WITH 5;
+
+  
   
 
 
