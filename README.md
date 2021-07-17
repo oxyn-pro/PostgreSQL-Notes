@@ -197,8 +197,18 @@ example:
 >SELECT nextval('person_id_seq'::regclass);
 >
 >ALTER SEQUENCE person_id_seq RESTART WITH 5;
-
   
+## Extensions (UUID installation):
+>SELECT * FROM pg_available_extensions;
+>
+>CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+>
+>SELECT uuid_generate_v4();
+
+## Inserting UUID as ID to tables:
+>CREATE TABLE person (person_uid UUID NOT NULL, ...other_collumns )
+>
+>INSERT INTO person (person_uid, ...other_collumns) VALUES ( uuid_generate_v4(), ...other_collumns)
   
 
 
