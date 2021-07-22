@@ -210,6 +210,15 @@ example:
 >
 >INSERT INTO person (person_uid, ...other_collumns) VALUES ( uuid_generate_v4(), ...other_collumns);
   
+  
+# DATABASE DESIGN:
+### Every database, table, column, entity, fact must first be organized and drawn (preferably in the form of diagrams) in order to better understand what to work with.
+In my case i use this app in order to work with diagrams- https://www.diagrams.net
+
+As an example I took the youtube database creation project (it is very silly, not detailed because i just wanted to construct the general idea of working with PostgreSQL)
+
+![image](https://user-images.githubusercontent.com/69118015/126674794-ccee4814-c468-43d5-a24d-48393b7a59cc.png)
+
 
 
 
