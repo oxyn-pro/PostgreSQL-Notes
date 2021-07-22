@@ -219,6 +219,27 @@ As an example I took the youtube database creation project (it is very silly, no
 
 ![image](https://user-images.githubusercontent.com/69118015/126674794-ccee4814-c468-43d5-a24d-48393b7a59cc.png)
 
+  
+## 1NF - 1 Normal Form:
+If the values of each atribute, and entity are atomic, it means that they are in 1 Normal Form. If in the attribute there are 2 values/keys/facts they break the rule, meaning that the table is not in 1 Normal Form (AND IT IS VERY BAD PRACTISE!!!). 
+  
+First normal form tells us to:
+
+- Get rid of non atomic values,
+- Get rid of repeating row values,
+- Get rid of repeating columns.
+  
+Attributes should only have single atomic values.
+  
+example:
+![image](https://user-images.githubusercontent.com/69118015/126682843-223d5440-52b3-45ad-9223-8f421db289d3.png)
+
+Here the 'phone_number' violates the 1 Normal Form by having non atomic values inside of 'phone_number' attribute. 
+In order to fix it and transform it to 1NF, we need to divide that table into 2 tables by creating a second table called 'phone_number': 
+![image](https://user-images.githubusercontent.com/69118015/126684104-be7ec126-01b8-4e07-8016-597dcf9eab23.png)
+
+  
+
 
 
 
