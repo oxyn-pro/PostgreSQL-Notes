@@ -249,6 +249,14 @@ The attribute has a partial dependency to other Primary Key column when it is no
 ![image](https://user-images.githubusercontent.com/69118015/126686430-2a49eef4-0a93-4758-a5f9-b79ea2da763c.png)
 
 In order to transform it we need to first get rid of the partial dependency in our case, which is 'ISBN', and create another table with the primary key 'book_id' (which will also be a foreign key) and with 'ISBN'.
+  
+  
+## 3NF - 3 Normal Form
+In order to meet requirements of 3NF, the table(s) should:
+- first meet requirements of 2NF
+- do not have transitive dependencies (a.k.a no intermideary attribute in one table (it should be transfered to other table))
+  
+The attribute has a transitive dependency when it is connected to another table which is related to another table(3 -> 2 -> 1). In this situation, there should be created another separate table and transfer the necessary data to that table.
 
 
 
