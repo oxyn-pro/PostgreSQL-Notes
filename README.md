@@ -257,6 +257,18 @@ In order to meet requirements of 3NF, the table(s) should:
 - do not have transitive dependencies (a.k.a no intermideary attribute in one table (it should be transfered to other table))
   
 The attribute has a transitive dependency when it is connected to another table which is related to another table(3 -> 2 -> 1). In this situation, there should be created another separate table and transfer the necessary data to that table.
+  
+![image](https://user-images.githubusercontent.com/69118015/126711013-4aa62057-986c-4999-b6eb-6ad99aaa7869.png)
+
+The solution for this is to divide the table into multiple tables (star), and transfer necessary attributes (star_id, star, star_meaning).
+![image](https://user-images.githubusercontent.com/69118015/126711615-ca9c7777-81e6-44c5-9218-940c801dbe56.png)
+
+  
+### To sum up:
+- 1NF - 1 Normal Form is making everything Atomic
+- 2NF - 2 Normal Form is removing Partial Dependecy(s)
+- 3NF - 3 Normal Form is removing Transitive Dependency(s)
+   
 
 
 
