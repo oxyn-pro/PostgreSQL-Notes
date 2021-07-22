@@ -219,7 +219,7 @@ As an example I took the youtube database creation project (it is very silly, no
 
 ![image](https://user-images.githubusercontent.com/69118015/126674794-ccee4814-c468-43d5-a24d-48393b7a59cc.png)
 
-  
+## NORMALIZATION:
 ## 1NF - 1 Normal Form:
 If the values of each atribute, and entity are atomic, it means that they are in 1 Normal Form. If in the attribute there are 2 values/keys/facts they break the rule, meaning that the table is not in 1 Normal Form (AND IT IS VERY BAD PRACTISE!!!). 
   
@@ -239,8 +239,16 @@ In order to fix it and transform it to 1NF, we need to divide that table into 2 
 ![image](https://user-images.githubusercontent.com/69118015/126684104-be7ec126-01b8-4e07-8016-597dcf9eab23.png)
 
   
+## 2NF - 2 Normal Form
+In order to meet requirements of 2NF, the table(s) should:
+- first meet requirements of 1NF
+- do not have partial dependencies
+  
+The attribute has a partial dependency to other Primary Key column when it is not directly connected to the required column, meaning that a many-to-many relation of 2 tables 'author' and 'book' have a bridge table called 'book_author' and it can have many attributes like book_id, author_id, but it can also have 'ISBN'(book's unique id) that is incorrect, and in this case, the 'ISBN' has a partial dependency only to 'book_id' because other columns are not relevant to 'ISBN'.
+  
+![image](https://user-images.githubusercontent.com/69118015/126686430-2a49eef4-0a93-4758-a5f9-b79ea2da763c.png)
 
-
+In order to transform it we need to first get rid of the partial dependency in our case, which is 'ISBN', and create another table with the primary key 'book_id' (which will also be a foreign key) and with 'ISBN'.
 
 
 
