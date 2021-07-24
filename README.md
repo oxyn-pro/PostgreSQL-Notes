@@ -268,6 +268,11 @@ The solution for this is to divide the table into multiple tables (star), and tr
 - 1NF - 1 Normal Form is making everything Atomic
 - 2NF - 2 Normal Form is removing Partial Dependecy(s)
 - 3NF - 3 Normal Form is removing Transitive Dependency(s)
+  
+## Final project on Database Design
+![2021-07-24_14-42-15](https://user-images.githubusercontent.com/69118015/126864690-b05b719a-9127-4f8a-ab92-4483a5ecc82a.png)
+
+Note: SQL statements(code) is attached in directory section (file name: YouTube_ERD.sql) 
    
 
 
