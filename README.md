@@ -305,6 +305,19 @@ In the above example, we can experiment with 'Transactions', if we start with BE
 
 ## Check all INDEXES of the database
 >SELECT tablename, indexname, indexdef FROM pg_indexes WHERE schemaname = <name_of_the_schema> (which is in my case 'public')
+  
+## Create and Drop INDEXES:
+CREATE
+>CREATE INDEX <name_of_the_index> ON <table_name>(column_name);
+>
+DROP
+>DROP INDEX <name_of_the_index>;
+  
+example:
+>CREATE INDEX account_name_idx ON account(name);
+>
+>DROP INDEX account_name_idx;
+  
    
 
 
