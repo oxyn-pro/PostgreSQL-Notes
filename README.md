@@ -321,8 +321,17 @@ example:
 >
 >DROP INDEX account_name_idx;
   
-   
-
+## Create and Drop MULTI-COLUMN-INDEXES:
+>CREATE INDEX person_first_name_last_name_idx ON person(first_name, last_name);
+>
+>DROP INDEX person_first_name_last_name_idx; 
+  
+Do not forget to follow these rules: 
+>SELECT ...... WHERE first_name = <name_first> AND last_name = <name_last>; IS GOOD 
+>
+>SELECT ...... WHERE first_name = <name_first>; IS GOOD 
+>
+>SELECT ...... WHERE last_name = <name_last>; IS BAD 
 
 
 
