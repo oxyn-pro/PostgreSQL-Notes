@@ -272,7 +272,26 @@ The solution for this is to divide the table into multiple tables (star), and tr
 ## Final project on Database Design
 ![2021-07-24_14-42-15](https://user-images.githubusercontent.com/69118015/126864690-b05b719a-9127-4f8a-ab92-4483a5ecc82a.png)
 
-Note: SQL statements(code) is attached in directory section (file name: YouTube_ERD.sql) 
+Note: SQL statements(code) is attached in directory section (file name: YouTube_ERD.sql)
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+## JOINS (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN)
+#### (INNER) JOIN
+>SELECT * FROM <table_name> (INNER) JOIN <other_table> ON <1_table_name>.<column_name> = <2_table_name>.<column_name>;
+ 
+#### LEFT (OUTER) JOIN
+>SELECT * FROM <table_name> LEFT (OUTER) JOIN <other_table> ON <1_table_name>.<column_name> = <2_table_name>.<column_name>;
+  
+#### RIGHT (OUTER) JOIN
+>SELECT * FROM <table_name> RIGHT (OUTER) JOIN <other_table> ON <1_table_name>.<column_name> = <2_table_name>.<column_name>;
+  
+#### FULL JOIN
+>SELECT * FROM <table_name> FULL JOIN <other_table> ON <1_table_name>.<column_name> = <2_table_name>.<column_name>;
+ 
+  
+
+
    
 
 
