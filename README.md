@@ -307,6 +307,9 @@ In the above example, we can experiment with 'Transactions', if we start with BE
 >SELECT tablename, indexname, indexdef FROM pg_indexes WHERE schemaname = <name_of_the_schema> (which is in my case 'public')
   
 ## Create and Drop INDEXES:
+With Indexes Searching the particular information is much faster rather than not having any indexes. 
+Let's imagine a book with thousands of pages and each page is an index, without the index finding the specific information will take a lot of time, but if we put/have indexes we can momentarily find the necessary information. 
+  
 CREATE
 >CREATE INDEX <name_of_the_index> ON <table_name>(column_name);
 >
