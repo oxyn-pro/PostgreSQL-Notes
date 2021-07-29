@@ -303,7 +303,8 @@ This is very powerful when it comes to the debugging process, because after goin
 
 In the above example, we can experiment with 'Transactions', if we start with BEGIN, we can write quires and if one of them fails we can easily ROLLBACK to the initial action, or we everything finishes successfully we can COMMIT the changes, meaning that the changes will be committed to the original/main database. 
 
-
+## Check all INDEXES of the database
+>SELECT tablename, indexname, indexdef FROM pg_indexes WHERE schemaname = <name_of_the_schema> (which is in my case 'public')
    
 
 
