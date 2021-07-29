@@ -341,5 +341,21 @@ For example:
 
 Right now out_of_stock is True, which means that it will create the index only to the subset of 'out_of_stock' which is 'True'. If we want to change 'True' to 'False, we just need to write '..... WHERE NOT out_of_stock'. 
 
+## Functions:
+  
+>CREATE OR REPLACE FUNCTION <function_name> (a INT, b TEXT)
+>  RETURNS INT 
+>  LANGUAGE plqgsql (you can write code in any language: python, java, javascript)
+>AS
+>$$
+>DECLARE
+>  --variable_declaration
+>  varr INT;
+>
+>BEGIN 
+>   --logic
+>END;
+>$$
+
 
 
