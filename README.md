@@ -356,6 +356,21 @@ Right now out_of_stock is True, which means that it will create the index only t
 >   --logic
 >END;
 >$$
-
-
+  
+example:
+>CREATE OR REPLACE FUNCTION count_by_first_name (p_first_name TEXT)
+>    RETURNS INT
+>    LANGUAGE plpgsql
+>AS
+>$$
+>    DECLARE
+>        total INT;
+>    BEGIN
+>        SELECT COUNT(*) INTO total FROM person WHERE first_name = p_first_name;                     
+>        RETURN total;
+>    END;
+>$$
+  
+In order to call a function:
+>SELECT count_by_first_name(p_first_name: 'Ruby');
 
