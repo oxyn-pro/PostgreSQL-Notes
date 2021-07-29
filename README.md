@@ -294,9 +294,12 @@ Note: SQL statements(code) is attached in directory section (file name: YouTube_
 This is very powerful when it comes to the debugging process, because after going through the 1st try, if any errors occur, we can pipe the flow on the 2nd try and end with a COMMIT, or if at least one of them failed, we can just ROLLBACK (return to the initial destination).
   
 >BEGIN;
+>
 >UPDATE accounts SET balance = balance - 200 WHERE id = 1;
->UPDATE accounts SET balance = balance + 200 WHERE id = 2:
->ROLLBACK "or" COMMIT
+>
+>UPDATE accounts SET balance = balance + 200 WHERE id = 2;
+>
+>ROLLBACK "or" COMMIT;
 
 In the above example, we can experiment with 'Transactions', if we start with BEGIN, we can write quires and if one of them fails we can easily ROLLBACK to the initial action, or we everything finishes successfully we can COMMIT the changes, meaning that the changes will be committed to the original/main database. 
 
