@@ -332,6 +332,14 @@ Do not forget to follow these rules:
 >SELECT ...... WHERE first_name = <name_first>; IS GOOD 
 >
 >SELECT ...... WHERE last_name = <name_last>; IS BAD 
+  
+## Partial INDEXES:
+It is when we want to create an index to the subset of the column
+
+For example:
+>CREATE INDEX product_out_of_stock_idx ON product(discontinued) WHERE out_of_stock: 
+
+Right now out_of_stock is True, which means that it will create the index only to the subset of 'out_of_stock' which is 'True'. If we want to change 'True' to 'False, we just need to write '..... WHERE NOT out_of_stock'. 
 
 
 
