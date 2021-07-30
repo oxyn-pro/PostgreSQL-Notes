@@ -379,5 +379,17 @@ In order to call a function:
 
 Delete function:
 >DROP FUNCTION <name_of_the_function>
+  
+## CREATE USER/ROLE;
+CREATE 
+>CREATE ROLE <name_of_the_user> WITH SUPERUSER LOGIN PASSWORD 'random_nums' CREATEDB CREATEROLE;
+>
+>CREATE USER <name_of_the_user> WITH SUPERUSER LOGIN PASSWORD 'random_nums' CREATEDB CREATEROLE;
+ 
+DELETE
+>DROP USER <name_of_the_user>;
+>
+>DROP ROLE <name_of_the_user>;
+
 
 
