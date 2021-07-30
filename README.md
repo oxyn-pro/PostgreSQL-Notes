@@ -373,4 +373,11 @@ example:
   
 In order to call a function:
 >SELECT count_by_first_name(p_first_name: 'Ruby');
+  
+### To see all the functions in the table | DELETE function:
+>\df
+
+Delete function:
+>DROP FUNCTION <name_of_the_function>
+
 
