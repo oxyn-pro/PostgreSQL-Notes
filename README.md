@@ -393,5 +393,9 @@ DELETE
 >
 >DROP ROLE <name_of_the_user>;
 
-
+### If you want to DELETE user but there is a mistake: "....depends on it!"
+```
+  REVOKE ALL ON DATABASE postgres FROM test_user;
+  REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM test_user;
+```
 
