@@ -402,5 +402,5 @@ DELETE
 ```
 
 ---------------------------------------------------------------------
-## Write 
+## Copy csv to database
 COPY savdo_product FROM 'C:\user\folder\test.csv' WITH CSV HEADER DELIMITER ','
