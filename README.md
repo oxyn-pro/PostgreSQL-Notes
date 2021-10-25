@@ -21,6 +21,8 @@
 >CREATE DATABASE <name_of_database> ;
 >
 >DROP DATABASE <name_of_database> ;
+>
+>DROP DATABASE database_name WITH (FORCE);
 
 ## To create a Table:
 >CREATE TABLE <name_of_table> ;
@@ -399,3 +401,6 @@ DELETE
   REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM test_user;
 ```
 
+---------------------------------------------------------------------
+## Write 
+COPY savdo_product FROM 'C:\user\folder\test.csv' WITH CSV HEADER DELIMITER ','
